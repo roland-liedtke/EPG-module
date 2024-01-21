@@ -4,7 +4,7 @@ async function getShort() {
     const target = document.getElementById("SHORT");
     const shortSchedule = document.getElementById("shortSchedule");
 
-    // ukrywa box na innych stronach
+    // wyświetla box gdzie występuje nasz moduł
     if (target !== null) {
         shortSchedule.style.display = "flex";
     }
@@ -13,7 +13,7 @@ async function getShort() {
     target.replaceWith(shortSchedule);
 
     // pobiera dane przez API i czeka az cały się załaduje
-    const response = await fetch("https://app.mediatool.tv/api/epg-api/information/channel/tbpl/weeks/4?token=86e89a49-9e7c-48da-8c29-7db6807e8f8b");
+    const response = await fetch( --> API URL <-- );
 
     // parsuje dane do JSON i czeka az się wykona
     const epg = await response.json();
