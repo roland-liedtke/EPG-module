@@ -13,7 +13,7 @@ async function getData() {
     target.replaceWith(plugin);
     
     // pobiera dane przez API i czeka az cały się załaduje
-    const response = await fetch("https://app.mediatool.tv/api/epg-api/information/channel/tbpl/weeks/4?token=86e89a49-9e7c-48da-8c29-7db6807e8f8b");
+    const response = await fetch( --> API URL <-- );
 
     // parsuje dane do JSON i czeka az się wykona
     const epg = await response.json();
@@ -35,7 +35,7 @@ async function getData() {
 
     // dodaje divy w nałówku tabeli
     thead.innerHTML += `<a class="box" id="todayBox">Dziś ${addZero(today.getDate())}/${addZero(today.getMonth() + 1)}</a>`;
-    thead.innerHTML += `<a class="box" id="tommorowBox">Jutro ${addZero(tommorow.getDate())}/${tommorow.getMonth() + 1}</a>`;
+    thead.innerHTML += `<a class="box" id="tommorowBox">Jutro ${addZero(tommorow.getDate())}/${addZero(tommorow.getMonth() + 1)}</a>`;
 
     // wyświetla domyślnie dane z Dzisiaj 
     showToday();
