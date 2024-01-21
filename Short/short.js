@@ -4,7 +4,7 @@ async function getShort() {
     const target = document.getElementById("SHORT");
     const shortSchedule = document.getElementById("shortSchedule");
 
-    // wyświetla box gdzie występuje nasz moduł
+    // ukrywa box na innych stronach
     if (target !== null) {
         shortSchedule.style.display = "flex";
     }
